@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="/campanhas-lucrativas/support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0f0f0f"/><text x="100" y="90" font-family="serif" font-size="34" fill="#fff" text-anchor="middle" font-style="italic">C</text><text x="100" y="130" font-family="sans-serif" font-size="14" fill="#22b558" text-anchor="middle">Campanhas</text></svg>
+</template>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Caveat:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    body { margin: 0; background: #fff; }
+    ::selection { background: oklch(15% 0 0); color: #fff; }
+    @media (min-width: 420px) and (max-width: 700px) {
+      [data-hero-content] { gap: 18px !important; }
+      [data-hero-cta] { margin-top: 18px !important; }
+      [data-hero-title] { font-size: 36px !important; margin-top: -14px !important; }
+    }
+    @media (max-width: 700px) {
+      [data-section-proof] { background-image: linear-gradient(oklch(15% 0 0 / 0.45), oklch(15% 0 0 / 0.45)), url('/campanhas-lucrativas/assets/proof-section-bg-mobile.png') !important; background-position: center, center -6px !important; }
+      [data-hero] { position: relative !important; min-height: 90svh !important; overflow: visible !important; display: flex !important; align-items: center !important; }
+      [data-site-header] { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; }
+      [data-hero-content] { padding: 78px 6vw 24px !important; width: 100% !important; align-items: flex-start !important; text-align: left !important; }
+    }
+    @media (max-width: 700px) {
+      [data-site-header] { height: 66px !important; padding: 0 6vw !important; }
+      [data-site-header] > a > img { height: 32px !important; }
+      [data-site-header-name] { font-size: 16px !important; }
+      [data-site-header-role] { font-size: 8px !important; }
+      [data-site-header-menu] span { width: 18px !important; }
+      [data-site-header] { justify-content: flex-end !important; }
+      [data-site-header] > a > img { position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; }
+      [data-hero-quote] { margin-top: 12px !important; }
+      [data-hero-title] { font-size: 32px !important; }
+      [data-hero-fade] { height: 110px !important; }
+      [data-hero-img-wrap] { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; }
+      [data-price-shadow] { background: rgba(0,0,0,0.55) !important; }
+      [data-hero-mobile-gradient] { display: block !important; }
+      [data-hero-desktop-gradient] { display: none !important; }
+      [data-hero-content] h1 { font-size: 30px !important; }
+      [data-hero-polaroid] { display: none !important; }
+      [data-cards] { grid-template-columns: 1fr !important; }
+      [data-cards] > div { border-right: none !important; }
+      [data-reasons-grid] { display: flex !important; overflow-x: auto !important; scroll-snap-type: x mandatory !important; gap: 14px !important; margin: 0 -5vw !important; padding: 0 5vw 8px !important; -webkit-overflow-scrolling: touch !important; }
+      [data-reasons-grid] > div { flex: 0 0 88% !important; scroll-snap-align: center !important; }
+      [data-reasons-dots] { display: flex !important; }
+      [data-inside-arrow], [data-inside-caption-wrap] { display: none !important; }
+      [data-inside-caption-mobile] { display: flex !important; }
+      [data-inside-footer-mobile] { display: flex !important; }
+      [data-inside-dots-row] { display: none !important; }
+      [data-proof-arrow], [data-proof-caption-wrap] { display: none !important; }
+      [data-proof-caption-mobile-row] { display: flex !important; }
+      [data-proof-imgbox][data-proof-active="5"] ~ [data-proof-caption-mobile-row] img { right: auto !important; left: calc(100% + 4px) !important; transform: rotate(120deg) scaleX(-1) !important; }
+      [data-proof-imgbox][data-proof-active="0"] ~ [data-proof-caption-mobile-row] { margin: 0 auto 14px !important; }
+      [data-proof-imgbox][data-proof-active="2"] ~ [data-proof-caption-mobile-row] img { right: calc(100% + 16px) !important; top: 100% !important; }
+      [data-proof-imgbox][data-proof-active="1"] ~ [data-proof-caption-mobile-row] img { right: auto !important; left: calc(100% + 4px) !important; top: 220% !important; transform: rotate(120deg) scaleX(-1) !important; }
+      [data-proof-imgbox][data-proof-active="3"] ~ [data-proof-caption-mobile-row] img { right: auto !important; left: calc(100% + 4px) !important; top: 90% !important; transform: rotate(120deg) scaleX(-1) !important; }
+      [data-proof-imgbox][data-proof-active="5"] ~ [data-proof-caption-mobile-row] span { transform: translateY(10px) !important; }
+      [data-proof-wrap]:has([data-proof-active="5"]) [data-proof-dots] { margin-top: 4px !important; }
+      [data-proof-outer] { flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 14px !important; height: auto !important; padding: 20px 6px 20px 26px !important; margin-top: 36px !important; position: relative !important; overflow: visible !important; }
+      [data-proof-caption-mobile-row] { display: none !important; }
+      [data-proof-caption-top] { display: block !important; }
+      [data-proof-intro] { margin-bottom: 80px !important; }
+      [data-proof-imgbox] { width: 130px !important; }
+      [data-proof-imgbox] > div { transform: scale(1.4) !important; }
+      [data-proof-detail] { text-align: left !important; font-size: 11.5px !important; line-height: 1.45 !important; max-width: 130px !important; margin: 0 !important; }
+      [data-proof-wrap] { max-width: 130px !important; height: auto !important; min-height: auto !important; }
+      [data-proof-detail] { white-space: normal !important; }
+      [data-proof-imgbox] div[data-proof-idx="0"] img { transform: scale(1.13) !important; }
+      [data-desktop-break] { display: none !important; }
+      [data-section-bio] > div { text-align: center !important; }
+      [data-section-bio] [data-bio-cols] { align-items: center !important; }
+      [data-section-bio] [data-bio-cols] > div:first-child { align-items: center !important; }
+      [data-section-bio] [data-bio-cols] > div:first-child > div { margin-left: auto !important; margin-right: auto !important; }
+      [data-section-bio] [data-bio-cols] > div:last-child { text-align: center !important; }
+      [data-section-proof] > div { text-align: left !important; }
+      [data-section-proof] p { margin-left: 0 !important; margin-right: auto !important; }
+      [data-stats-grid] { gap: 10px !important; }
+      [data-stats-grid] > div > div:first-child { font-size: 20px !important; }
+      [data-stats-grid] > div > div:last-child { font-size: 10.5px !important; }
+      [data-bio-stats] { grid-template-columns: 1fr !important; }
+      [data-proof-grid] { grid-template-columns: 1fr !important; }
+      [data-launch-grid] { grid-template-columns: 1fr !important; gap: 40px !important; }
+      [data-bio-cols] { flex-direction: column !important; gap: 28px !important; }
+      [data-bio-cols] > div:first-child { position: static !important; flex: none !important; width: 100% !important; align-items: flex-start !important; }
+      [data-bio-cols] img { max-width: 220px !important; }
+      [data-inside-cols] { flex-direction: column !important; gap: 40px !important; }
+      [data-inside-cols] > div:first-child { max-width: 100% !important; flex: none !important; width: 100% !important; }
+      [data-inside-cols] > div:last-child { align-self: auto !important; width: 100% !important; margin-left: 0 !important; margin-top: -4px !important; }
+      [data-inside-cols] [data-stats-grid] { grid-template-columns: 1fr 1fr 1fr !important; }
+      [data-inside-cta-wrap] { margin-top: 40px !important; }
+      [data-section-inside] { padding-bottom: 0px !important; }
+      [data-bio-cols] [data-bio-stats] { grid-template-columns: 1fr 1fr 1fr !important; }
+      [data-fornot-grid] { grid-template-columns: 1fr !important; }
+    }
+    @media (min-width: 701px) and (max-width: 1150px) {
+      [data-inside-cols] { flex-wrap: wrap !important; }
+      [data-inside-cols] > div:first-child { flex: 1 1 100% !important; max-width: 460px !important; margin: 0 auto !important; }
+      [data-inside-cols] > div:last-child { flex: 1 1 100% !important; margin-left: 0 !important; max-width: 460px !important; margin-top: 24px !important; }
+      [data-inside-arrow], [data-inside-caption-wrap] { display: none !important; }
+      [data-cta-row] { transform: translateY(32px) !important; }
+    }
+    @media (min-width: 701px) {
+      [data-bio-note] { margin-top: 12px !important; }
+      [data-cta-row] { display: flex !important; align-items: center !important; gap: 64px !important; max-width: 980px !important; text-align: left !important; }
+      [data-cta-polaroid] { flex: 0 0 auto !important; order: 2 !important; margin-bottom: 0 !important; transform: rotate(-2.5deg) translateY(0px) !important; }
+      [data-cta-row] { align-items: center !important; }
+      [data-proof-wrap] { max-width: 340px !important; height: auto !important; min-height: auto !important; }
+      [data-proof-outer] { flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 8px !important; height: auto !important; padding-left: 140px !important; max-width: 760px !important; }
+      [data-proof-detail] { text-align: left !important; max-width: 280px !important; margin: 0 0 0 -70px !important; font-size: 16px !important; padding-top: 0 !important; align-self: center !important; }
+      [data-proof-imgbox] { width: 320px !important; }
+      [data-proof-imgbox]:not([data-proof-active="0"]) [data-proof-caption-wrap] { right: calc(100% + 32px) !important; }
+      [data-proof-imgbox][data-proof-active="0"] [data-proof-caption-wrap] { right: calc(100% - 20px) !important; }
+      [data-proof-imgbox][data-proof-active="0"] [data-proof-arrow] { right: calc(100% - 38px) !important; }
+      [data-proof-imgbox][data-proof-active="0"] { transform: translateX(-24px) !important; }
+      [data-proof-imgbox][data-proof-active="1"] { transform: translateX(-22px) !important; }
+      [data-proof-imgbox][data-proof-active="2"] { transform: translateX(0px) !important; }
+      [data-proof-imgbox][data-proof-active="4"] { transform: translateX(-20px) !important; }
+      [data-proof-outer]:has([data-proof-active="4"]) [data-proof-detail] { transform: translateX(-10px) !important; }
+      [data-proof-outer]:has([data-proof-active="0"]) [data-proof-detail] { margin-top: -30px !important; transform: translateX(-90px) translateY(14px) !important; }
+      [data-cta-text] { flex: 1 !important; }
+    }
+    @media (min-width: 420px) and (max-width: 700px) {
+      [data-site-header] > a > img { height: 34px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; background: #fff; color: oklch(18% 0 0); width: 100%; max-width: 100vw; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%;" data-screen-label="LP — Campanhas Lucrativas">
+
+  <!-- Hero -->
+  <div data-hero="" style="position: relative; display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; min-height: 92lvh; background: oklch(98% 0.002 90); overflow: hidden;" ref="{{ heroRef }}">
+    <div data-hero-img-wrap="" style="position: absolute; inset: 0; z-index: 0;">
+      <img src="/campanhas-lucrativas/assets/full-mrdp9d90.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center 32%;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.35) 56%, rgba(0,0,0,0.08) 76%);" data-hero-desktop-gradient=""></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.4) 42%, rgba(0,0,0,0.72) 66%, rgba(0,0,0,0.85) 84%); display: none;" data-hero-mobile-gradient=""></div>
+    </div>
+    <div data-hero-fade="" style="position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 150px; background: linear-gradient(180deg, #000 0%, #000 45%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+    <div data-site-header="" style="position: absolute; top: 0; left: 0; right: 0; z-index: 50; height: 68px; background: transparent; display: flex; align-items: center; justify-content: flex-end; padding: 0 4vw;">
+      <a href="/" style="margin-right: auto; display: inline-flex; line-height: 0;"><img src="/campanhas-lucrativas/assets/wordmark-hanny-cristina-cropped.png" alt="Hanny Cristina - Mentora de Lojistas" style="height: 32px; width: auto; filter: brightness(0) invert(1);"></a>
+      <div data-site-header-menu="" onClick="{{ toggleMenu }}" style="display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; margin: -10px;">
+        <span style="display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform .25s ease, opacity .25s ease;" style-hover="opacity:0.8"></span>
+        <span style="display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px;"></span>
+        <span style="display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px;"></span>
+      </div>
+      <sc-if value="{{ menuOpen }}">
+        <div onClick="{{ closeMenu }}" style="position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,0.5);"></div>
+        <div style="position: fixed; top: 0; right: 0; bottom: 0; z-index: 41; background: #fff; border-left: 1px solid oklch(90% 0 0); width: 270px; padding: 78px 0 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.14); overflow-y: auto;">
+          <button onClick="{{ closeMenu }}" aria-label="Fechar menu" style="all: unset; position: absolute; top: 18px; right: 18px; color: oklch(45% 0 0); font-size: 22px; line-height: 1; cursor: pointer; padding: 6px;">×</button>
+          <a href="/" style="display: flex; justify-content: center; padding: 0 24px 22px; margin-top: -38px;">
+            <img src="/campanhas-lucrativas/assets/wordmark-hanny-cristina-cropped.png" alt="Hanny Cristina" style="height: 38px; width: auto; filter: brightness(0);">
+          </a>
+          <div style="border-top: 1px solid oklch(90% 0 0); margin: 0 24px 10px;"></div>
+          <sc-for list="{{ menuLinks }}" as="item" hint-placeholder-count="7">
+            <a href="{{ item.href }}" onClick="{{ item.close }}" style="display: block; text-decoration: none; color: oklch(20% 0 0); font-size: 14.5px; font-weight: 400; padding: 13px 24px;" style-hover="background:oklch(96% 0 0);">{{ item.label }}</a>
+          </sc-for>
+          <div style="margin: 8px 24px 10px; border-top: 1px solid oklch(90% 0 0); padding-top: 16px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(55% 0 0); font-weight: 700;">Aumente suas vendas comigo</div>
+          <sc-for list="{{ courseLinks }}" as="item" hint-placeholder-count="4">
+            <a href="{{ item.href }}" target="{{ item.target }}" onClick="{{ item.close }}" style="display: block; text-decoration: none; color: oklch(20% 0 0); font-size: 14.5px; font-weight: 400; padding: 11px 24px;" style-hover="background:oklch(96% 0 0);">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+    <div data-hero-content="" style="position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: center; padding: clamp(100px, 10vw, 148px) 4vw 5vw; gap: 20px;">
+      <h1 data-hero-title="" style="font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4.2vw, 56px); line-height: 1.1; margin: 0; font-weight: 400; color: #fff;">Você posta todo dia.<br>Mas onde estão <span style="font-style: italic;">as vendas?</span></h1>
+      <p data-hero-sub="" style="font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.82); max-width: 480px; margin: 0; text-shadow: 0 2px 12px rgba(0,0,0,0.6);">Aprenda a montar campanhas simples que transformam seguidoras em clientes — <span style="color: #fff;">sem tráfego pago, sem depender de sorte, sem precisar postar mais do que já posta.</span></p>
+      <div data-hero-quote="" style="border-left: 3px solid #fff; background: rgba(255,255,255,0.1); padding: 14px 18px; max-width: 480px; border-radius: 0 8px 8px 0;">
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.92);">O problema não é o seu conteúdo. É que você <b>não tem um plano de vendas</b>. Seguidora vira cliente quando você conduz — não quando só posta.</p>
+      </div>
+      <div data-hero-cta="" style="display: flex; gap: 22px; align-items: center; margin-top: 4px; flex-wrap: wrap;">
+        <a href="{{ kiwifyUrl }}" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; background: #22b558; color: #fff; font-weight: 700; font-size: 15px; padding: 14px 24px; border-radius: 100px; box-shadow: 0 14px 28px -10px rgba(34,181,88,0.55);">
+          Quero minha campanha lucrativa
+          <span>→</span>
+        </a>
+        <a href="#incluso" style="text-decoration: underline; color: #fff; font-size: 14px; font-weight: 600;">Ver o que você recebe</a>
+      </div>
+    </div>
+    <div data-hero-polaroid="" style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 40px 5vw; transform: translate(-17px, 41px) scale(1.06, 0.98)">
+      <div style="position: relative; transform: rotate(2.5deg);">
+        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 84px; height: 24px; background: rgba(170,170,170,0.55); box-shadow: 0 1px 2px rgba(0,0,0,0.15);"></div>
+        <div data-hero-polaroid-frame="" style="background: #fff; padding: 14px 14px 40px; box-shadow: 0 20px 44px rgba(0,0,0,0.16);">
+          <img src="/campanhas-lucrativas/assets/curso-hero-walk.jpg" alt="Hanny Cristina" style="display: block; width: 264px; max-width: 27.5vw; height: auto; object-fit: cover; aspect-ratio: 2/3; object-position: 75% 10%;">
+          <div style="padding-top: 10px; padding-right: 12px; text-align: right;">
+            <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: 16px; color: #00000093;">© 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div style="overflow: hidden; white-space: nowrap; padding: 24px 0; border-top: 1px solid oklch(88% 0 0); border-bottom: 1px solid oklch(88% 0 0);">
+    <div style="display: inline-flex; align-items: center; width: max-content; animation: marquee 30s linear infinite;">
+      <span style="display: inline-flex; align-items: center; gap: 28px;">
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Campanhas que vendem</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">100% tráfego orgânico</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Sem depender de sorte</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Método testado</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+      </span>
+      <span style="display: inline-flex; align-items: center; gap: 28px; padding-left: 28px;">
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Campanhas que vendem</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">100% tráfego orgânico</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Sem depender de sorte</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+        <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: clamp(17px, 1.6vw, 20px); color: #111; white-space: nowrap;">Método testado</span>
+        <svg viewBox="0 0 24 24" width="13" height="13" style="display: inline-block; flex-shrink: 0;"><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="#111"></path></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Por que campanhas são essenciais (black) -->
+  <div style="background: oklch(15% 0 0); color: #fff;">
+    <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); padding: clamp(56px, 7vw, 96px) 5vw clamp(40px, 5vw, 64px);">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(65% 0 0); font-weight: 700; margin-bottom: 22px;">Por que campanhas são essenciais</div>
+      <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4vw, 48px); line-height: 1.15; font-weight: 400; margin: 0; max-width: 760px;">Campanhas não são promoção.<br>São o <span style="font-style: italic;">motor</span> da sua loja.</h2>
+    </div>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 5vw clamp(56px, 7vw, 96px);">
+      <div data-reasons-grid="" ref="{{ reasonsScrollRef }}" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .05s, transform .9s cubic-bezier(.16,1,.3,1) .05s; border: 1px solid oklch(30% 0 0); border-radius: 6px; padding: 32px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(60% 0 0); margin-bottom: 14px;">01</div>
+          <h3 style="font-size: 16.5px; font-weight: 700; margin: 0 0 10px;">Impacto direto no faturamento</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: oklch(72% 0 0); margin: 0;">Campanhas bem estruturadas podem aumentar suas vendas em até 95%, não por preço baixo, mas por execução estratégica. Elas criam visibilidade, giram estoque e geram caixa imediato.</p>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .1s, transform .9s cubic-bezier(.16,1,.3,1) .1s; border: 1px solid oklch(30% 0 0); border-radius: 6px; padding: 32px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(60% 0 0); margin-bottom: 14px;">02</div>
+          <h3 style="font-size: 16.5px; font-weight: 700; margin: 0 0 10px;">Novos clientes + ticket médio maior</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: oklch(72% 0 0); margin: 0;">Quando você cria narrativa (tema, urgência, desejo), a cliente compra mais e traz outras. Não é sorte de engajamento, é estratégia de atração que se repete todo mês.</p>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .15s, transform .9s cubic-bezier(.16,1,.3,1) .15s; border: 1px solid oklch(30% 0 0); border-radius: 6px; padding: 32px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(60% 0 0); margin-bottom: 14px;">03</div>
+          <h3 style="font-size: 16.5px; font-weight: 700; margin: 0 0 10px;">Posicionamento e fidelização</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: oklch(72% 0 0); margin: 0;">Campanhas moldam como sua loja é vista: referência, exclusividade, comunidade. Quem compra de uma campanha bem feita volta e indica. Sem precisar de anúncio.</p>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .2s, transform .9s cubic-bezier(.16,1,.3,1) .2s; border: 1px solid oklch(30% 0 0); border-radius: 6px; padding: 32px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(60% 0 0); margin-bottom: 14px;">04</div>
+          <h3 style="font-size: 16.5px; font-weight: 700; margin: 0 0 10px;">O mercado está crescendo</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: oklch(72% 0 0); margin: 0;">O e-commerce brasileiro cresceu 26% em 2025. Quem vai capturar esse crescimento em 2026 são as lojistas com método, não as que ainda postam no improviso.</p>
+        </div>
+      </div>
+
+      <div data-reasons-dots="" style="display: none; align-items: center; justify-content: center; gap: 8px; margin-top: 16px;">
+        <sc-for list="{{ reasonsDots }}" as="dot" hint-placeholder-count="4">
+          <span style="height: 6px; border-radius: 100px; transition: width .3s ease, opacity .3s ease; background: #fff; display: block; width: {{ dot.width }}; opacity: {{ dot.opacity }};"></span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quem vai te ensinar -->
+  <div id="quem-vai-ensinar" style="padding: clamp(72px, 9vw, 120px) 5vw;" data-section-bio="">
+    <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); max-width: 1100px; margin: 0 auto;">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(45% 0 0); font-weight: 700; margin-bottom: 34px;">Quem vai te ensinar</div>
+      <div data-bio-cols="" style="display: flex; gap: 108px; align-items: flex-start; max-width: 980px; margin: 0 auto;">
+        <div style="flex: 0 0 260px; display: flex; flex-direction: column; align-items: center;">
+          <div style="position: relative; transform: rotate(-3deg); margin: 6px 0 22px;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-4deg); width: 76px; height: 22px; background: rgba(170,170,170,0.55); box-shadow: 0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background: #fff; padding: 12px 12px 10px; box-shadow: 0 14px 30px rgba(0,0,0,0.18);">
+              <div style="width: 184px; height: 218px; overflow: hidden;"><img src="/campanhas-lucrativas/assets/curso-hanny-opt.jpg" alt="Hanny Cristina" style="display: block; width: 100%; object-fit: cover; object-position: center 18%; height: 100%; position: static; transform: scale(1.05) translateX(-4%); transform-origin: center 18%;"></div>
+              <div style="padding: 6px 2px 2px; text-align: center;">
+                <div style="font-family: 'Caveat', cursive; font-size: 24px; font-weight: 600; color: oklch(38% 0 0); line-height: 1; margin-bottom: -4px;">Hanny Cristina</div>
+                <div style="font-family: 'Caveat', cursive; font-size: 15px; color: oklch(40% 0 0); margin-top: 2px;">mentora de lojistas</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-bio-stats="" style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 28px; width: 100%;">
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">10 anos</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">empreendendo no varejo</div>
+            </div>
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">+100</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">lojistas transformadas</div>
+            </div>
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">96%</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">de crescimento em 4 meses</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-width: 0;">
+          <p style="margin: 0; font-size: 14px; line-height: 1.75; color: oklch(32% 0 0);">Teve um mês que eu <span style="position: relative; display: inline-block;">quase fechei minha loja<svg width="100%" height="8" viewBox="0 0 220 8" preserveAspectRatio="none" style="position: absolute; left: -2px; width: calc(100% + 4px); height: 8px; overflow: visible; top: 19px"><path d="M3,4.5 C60,3 140,5.5 217,4" fill="none" stroke="oklch(15% 0 0)" stroke-width="1.3" stroke-linecap="round" opacity="0.55"></path></svg></span>.<br><br>Não porque o produto era ruim. Não porque eu não me dedicava. Mas porque eu fazia tudo: postava, atendia, caprichava nos conteúdos, e no fim do mês, o número na conta não refletia nada disso.<br><br>Eu não sabia o que estava errado. E o pior: todo mundo ao redor parecia estar vendendo, menos eu.<br><br>Foi nesse momento que eu parei de seguir dicas soltas e comecei a entender o que de fato movia uma venda: não é o post mais bonito. É a campanha por trás dele.<br><br>Quando eu aprendi a montar campanhas com começo, meio e fim, com narrativa, urgência e condução, minha loja <b>cresceu 96% em 4 meses</b>. Sem investir um real em anúncio.<br><br>Nos últimos 2 anos, refinei esse método e apliquei com mais de 100 lojistas: de quem estava no zero absoluto a quem já vendia mas travava todo mês no mesmo número.</p>
+
+          <div style="margin-top: 58px; position: relative; transform: rotate(-0.4deg); background: #fff; box-shadow: 0 10px 24px rgba(0,0,0,0.12); padding: 24px 28px;" data-bio-note="">
+            <div style="position: absolute; top: -15px; left: 6px; transform: rotate(45deg); width: 14px; height: 63px; background: rgba(170,170,170,0.55); box-shadow: 0 1px 2px rgba(0,0,0,0.15)"></div>
+            <p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 600; font-size: 18px; line-height: 1.4; color: oklch(40% 0 0);">Eu sei exatamente como é postar todo dia e não ver resultado. E sei o que muda quando você para de improvisar e começa a vender de verdade com campanhas. E é isso que você vai aprender aqui!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- O que você recebe (black, numbered cards) -->
+  <div id="incluso" style="background: oklch(15% 0 0); color: #fff;">
+    <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); padding: clamp(56px, 7vw, 96px) 5vw 0;">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(65% 0 0); font-weight: 700; margin-bottom: 22px;">O que você recebe</div>
+      <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.15; font-weight: 400; margin: 0 0 44px; max-width: 760px;">Um plano completo <span style="font-style: italic;">pra vender</span> <br>na próxima campanha.</h2>
+    </div>
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 5vw clamp(64px, 8vw, 100px);">
+      <div style="display: flex; flex-direction: column; gap: 2px; border-radius: 6px; overflow: hidden; border: 1px solid oklch(30% 0 0);">
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .05s, transform .9s cubic-bezier(.16,1,.3,1) .05s; display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px; border-bottom: 1px solid oklch(30% 0 0);">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(55% 0 0); flex-shrink: 0;">01</span>
+          <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+            <div><h3 style="font-size: 16px; font-weight: 700; margin: 0 0 6px;">Plano de vendas personalizado</h3><p style="font-size: 14px; line-height: 1.55; color: oklch(70% 0 0); margin: 0;">Adaptado pra sua loja, pronto pra aplicar. Sem estratégia genérica que não sai do papel.</p></div>
+            <span style="flex-shrink: 0; font-size: 13px; font-weight: 700; color: oklch(20% 0 0); background: oklch(93% 0 0); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">R$197</span>
+          </div>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .1s, transform .9s cubic-bezier(.16,1,.3,1) .1s; display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px; border-bottom: 1px solid oklch(30% 0 0);">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(55% 0 0); flex-shrink: 0;">02</span>
+          <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+            <div><h3 style="font-size: 16px; font-weight: 700; margin: 0 0 6px;">Checklist da campanha lucrativa</h3><p style="font-size: 14px; line-height: 1.55; color: oklch(70% 0 0); margin: 0;">O que fazer pra ter uma campanha de sucesso sem improvisar, sem travar na frente do celular.</p></div>
+            <span style="flex-shrink: 0; font-size: 13px; font-weight: 700; color: oklch(20% 0 0); background: oklch(93% 0 0); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">R$57</span>
+          </div>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .15s, transform .9s cubic-bezier(.16,1,.3,1) .15s; display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px; border-bottom: 1px solid oklch(30% 0 0);">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(55% 0 0); flex-shrink: 0;">03</span>
+          <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+            <div><h3 style="font-size: 16px; font-weight: 700; margin: 0 0 6px;">Campanhas validadas (+R$500K em faturamento)</h3><p style="font-size: 14px; line-height: 1.55; color: oklch(70% 0 0); margin: 0;">Campanhas reais, testadas por outras lojistas. Você copia, adapta e aplica.</p></div>
+            <span style="flex-shrink: 0; font-size: 13px; font-weight: 700; color: oklch(20% 0 0); background: oklch(93% 0 0); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">R$79</span>
+          </div>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .2s, transform .9s cubic-bezier(.16,1,.3,1) .2s; display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px; border-bottom: 1px solid oklch(30% 0 0);">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(55% 0 0); flex-shrink: 0;">04</span>
+          <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+            <div><h3 style="font-size: 16px; font-weight: 700; margin: 0 0 6px;">Aula prática passo a passo</h3><p style="font-size: 14px; line-height: 1.55; color: oklch(70% 0 0); margin: 0;">Você não assiste — você executa. Vai sair sabendo como montar sua campanha.</p></div>
+            <span style="flex-shrink: 0; font-size: 13px; font-weight: 700; color: oklch(20% 0 0); background: oklch(93% 0 0); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">R$97</span>
+          </div>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .25s, transform .9s cubic-bezier(.16,1,.3,1) .25s; display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: oklch(55% 0 0); flex-shrink: 0;">05</span>
+          <div style="flex: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+            <div><h3 style="font-size: 16px; font-weight: 700; margin: 0 0 6px;">Pasta secreta de conteúdos que vendem</h3><p style="font-size: 14px; line-height: 1.55; color: oklch(70% 0 0); margin: 0;">Conteúdos validados pra copiar, adaptar e publicar sem criar tudo do zero.</p></div>
+            <span style="flex-shrink: 0; font-size: 13px; font-weight: 700; color: oklch(20% 0 0); background: oklch(93% 0 0); padding: 4px 10px; border-radius: 6px; white-space: nowrap;">R$67</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align: right; margin: 28px 0 0; font-size: 15px; color: oklch(70% 0 0)">E <b>isso tudo</b> poderia facilmente custar <span style="text-decoration: line-through; color: oklch(0.55 0 0);">R$497&nbsp;</span></p>
+    </div>
+  </div>
+
+  <!-- Veja como é por dentro -->
+  <div id="veja-por-dentro" style="padding: clamp(72px, 9vw, 120px) 5vw;" data-section-inside="">
+    <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); max-width: 1100px; margin: 0 auto;">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(45% 0 0); font-weight: 700; margin-bottom: 22px;">Veja como é por dentro</div>
+      <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; font-weight: 400; margin: 0 0 40px; max-width: 700px;">O plano de vendas e a aula <br>que você vai ter acesso.</h2>
+      <div data-inside-cols="" style="display: flex; gap: 56px; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
+        <div style="flex: 0 0 460px; position: relative;">
+          <img src="/campanhas-lucrativas/assets/arrow-hand-drawn.png" alt="" style="position: absolute; right: -64px; top: 164px; width: 48px; height: auto; transform: translate(15px, -8px) rotate(51deg) scale(-0.73, 0.91)" data-inside-arrow="">
+          <div style="position: absolute; left: calc(100% + 40px); top: 200px; width: 200px; height: 60px;" data-inside-caption-wrap="">
+            <sc-for list="{{ insideCaptions }}" as="cap" hint-placeholder-count="2">
+              <div style="{{ cap.style }}"><span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: 22px; line-height: 1.3; color: oklch(45% 0 0); width: 139px; height: 78px">{{ cap.text }}</span></div>
+            </sc-for>
+          </div>
+          <div style="position: relative; width: 100%; aspect-ratio: 4/5; border-radius: 14px; overflow: hidden; border: 1px solid oklch(88% 0 0);">
+            <img src="/campanhas-lucrativas/assets/plano-de-vendas.jpg" alt="Plano de vendas dos R$0 aos R$10K" style="{{ insideStyles.0 }}">
+            <img src="/campanhas-lucrativas/assets/img_2322-jpg-1--mrfgjqcp.jpeg" alt="Tela do curso Dos R$0 aos R$10K com campanhas lucrativas" style="{{ insideStyles.1 }}">
+            <button onClick="{{ insidePrev }}" aria-label="Imagem anterior" style="all: unset; cursor: pointer; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 100px; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; z-index: 5;">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button onClick="{{ insideNext }}" aria-label="Próxima imagem" style="all: unset; cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 100px; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; z-index: 5;">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <div data-inside-dots-row="" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 18px;">
+            <sc-for list="{{ insideDots }}" as="dot" hint-placeholder-count="2">
+              <button onClick="{{ dot.goTo }}" aria-label="Ir para imagem" style="all: unset; cursor: pointer; height: 6px; border-radius: 100px; transition: width .3s ease, opacity .3s ease; background: oklch(20% 0 0); width: {{ dot.width }}; opacity: {{ dot.opacity }};"></button>
+            </sc-for>
+          </div>
+
+          <div data-inside-footer-mobile="" style="display: none; align-items: flex-start; justify-content: space-between; gap: 8px; margin-top: 10px;">
+            <div data-inside-caption-mobile="" style="display: flex; align-items: flex-start; justify-content: flex-start; gap: 4px; text-align: left;">
+              <img src="/campanhas-lucrativas/assets/arrow-hand-drawn.png" alt="" style="width: 30px; height: auto; transform: rotate(210deg); flex-shrink: 0; margin-top: 6px;">
+              <sc-for list="{{ insideCaptions }}" as="cap" hint-placeholder-count="2">
+                <span style="{{ cap.mobileStyle }}; margin-top: 8px; max-width: 220px; text-align: left; white-space: pre-line; font-family: 'Caveat', cursive; font-weight: 600; font-size: 20px; color: oklch(45% 0 0);">{{ cap.mobileText }}</span>
+              </sc-for>
+            </div>
+            <div data-inside-dots-row-mobile="" style="display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin-top: 8px;">
+              <sc-for list="{{ insideDots }}" as="dot" hint-placeholder-count="2">
+                <button onClick="{{ dot.goTo }}" aria-label="Ir para imagem" style="all: unset; cursor: pointer; height: 6px; border-radius: 100px; transition: width .3s ease, opacity .3s ease; background: oklch(20% 0 0); width: {{ dot.width }}; opacity: {{ dot.opacity }};"></button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .1s, transform .9s cubic-bezier(.16,1,.3,1) .1s; flex: 0 0 340px; min-width: 0; align-self: center; margin-left: 200px; margin-top: -28px;">
+          <div data-stats-grid="" style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">+500K</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">faturados com as campanhas</div>
+            </div>
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">1º dia</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">com vendas na primeira campanha</div>
+            </div>
+            <div style="border: 1px solid oklch(15% 0 0); border-radius: 10px; padding: 16px 12px; text-align: center;">
+              <div style="font-family: 'Instrument Serif', serif; font-size: 24px; color: oklch(15% 0 0);">0 reais</div>
+              <div style="font-size: 12px; color: oklch(45% 0 0); margin-top: 6px;">investido em anúncios</div>
+            </div>
+          </div>
+          <div style="margin-top: 40px;" data-inside-cta-wrap="">
+            <a href="{{ kiwifyUrl }}" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; box-sizing: border-box; background: #22b558; color: #fff; font-weight: 700; font-size: 16px; padding: 18px 24px; border-radius: 10px;">
+              Quero ter acesso agora
+              <span>→</span>
+            </a>
+          </div>
+          <p style="margin-top: 20px; font-size: 12.5px; line-height: 1.5; color: oklch(45% 0 0);">Garantia de 7 dias. Se você entrar, assistir e achar que não era o que esperava, devolvo 100% do seu dinheiro, sem perguntas, sem burocracia. O risco é todo meu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="feedbacks" style="background: linear-gradient(oklch(15% 0 0 / 0.45), oklch(15% 0 0 / 0.45)), url('/campanhas-lucrativas/assets/proof-section-bg.png') center / cover no-repeat, oklch(15% 0 0); color: #fff; padding: clamp(72px, 9vw, 120px) 5vw;" data-section-proof="">
+    <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); max-width: 1100px; margin: 0 auto;">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(65% 0 0); font-weight: 700; margin-bottom: 22px;">Resultados reais das alunas</div>
+      <p data-proof-intro="" style="font-size: 15.5px; line-height: 1.6; color: oklch(75% 0 0); margin: 0 0 40px; max-width: 620px;">Esses resultados não vieram de sorte. Vieram de <b>campanhas </b><br data-desktop-break="" data-om-id="065bc061:220"><b data-om-id="1e6f2279:235">estruturadas</b>, as mesmas que você vai aprender aqui.</p>
+      <div style="display: flex; flex-direction: column; align-items: center; background: oklch(15% 0 0); border: 1px solid oklch(35% 0 0); border-radius: 14px; padding: 40px 32px; max-width: 900px; margin: 0 auto;" data-proof-outer="">
+      <div data-proof-caption-top="" style="display: none; position: absolute; left: 0; right: 0; top: -30px; text-align: center; pointer-events: none;">
+        <sc-for list="{{ proofCaptions }}" as="cap" hint-placeholder-count="6">
+          <span style="{{ cap.mobileStyle }}; font-family: 'Caveat', cursive; font-weight: 600; font-size: 17px; color: #fff; white-space: pre-line;">{{ cap.mobileText }}</span>
+        </sc-for>
+      </div>
+      <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .05s, transform .9s cubic-bezier(.16,1,.3,1) .05s; max-width: 420px; margin: 0 auto; display: flex; flex-direction: column; min-height: 480px;" data-proof-wrap="">
+        <div style="position: relative; margin: 0 auto; width: min(320px, 84vw); order: 2;" data-proof-imgbox="" data-proof-active="{{ proofIndex }}">
+          <div style="position: relative; width: 100%; aspect-ratio: {{ proofBoxAspect }}; max-height: 420px; filter: drop-shadow(0 4px 10px rgba(255,255,255,0.12)); margin: 0 auto;">
+            <div style="position: absolute; right: calc(100% + 32px); top: 44%; width: 190px; height: 60px; text-align: right;" data-proof-caption-wrap="">
+              <sc-for list="{{ proofCaptions }}" as="cap" hint-placeholder-count="6">
+                <div style="{{ cap.style }}; justify-content: flex-end;"><span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: 21px; line-height: 1.3; color: #fff; white-space: pre-line;">{{ cap.text }}</span></div>
+              </sc-for>
+            </div>
+            <img src="/campanhas-lucrativas/assets/arrow-hand-drawn.png" alt="" style="position: absolute; right: calc(100% + 14px); top: calc(44% - 26px); width: 40px; height: auto; transform: rotate(-51deg) scale(0.73, 0.91); filter: invert(1) brightness(1.6)" data-proof-arrow="">
+            <div style="position: relative; width: 100%; height: 100%; border-radius: 10px; overflow: hidden;">
+              <div style="position:absolute; inset:0;" data-proof-idx="0"><img src="/campanhas-lucrativas/assets/fb-new-1.png" alt="Depoimento de aluna" style="{{ proofStyles.0 }}"></div>
+              <div style="position:absolute; inset:0;" data-proof-idx="1"><img src="/campanhas-lucrativas/assets/fb-new-2.png" alt="Depoimento de aluna" style="{{ proofStyles.1 }}"></div>
+              <div style="position:absolute; inset:0;" data-proof-idx="2"><img src="/campanhas-lucrativas/assets/fb-new-3.png" alt="Depoimento de aluna" style="{{ proofStyles.2 }}"></div>
+              <div style="position:absolute; inset:0;" data-proof-idx="3"><img src="/campanhas-lucrativas/assets/fb-new-4.png" alt="Depoimento de aluna" style="{{ proofStyles.3 }}"></div>
+              <div style="position:absolute; inset:0;" data-proof-idx="4"><img src="/campanhas-lucrativas/assets/fb-new-5.png" alt="Depoimento de aluna" style="{{ proofStyles.4 }}"></div>
+              <div style="position:absolute; inset:0;" data-proof-idx="5"><img src="/campanhas-lucrativas/assets/fb-new-6.png" alt="Depoimento de aluna" style="{{ proofStyles.5 }}"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div data-proof-caption-mobile-row="" style="display: none; align-items: center; justify-content: center; position: relative; margin: 0 auto 4px; width: fit-content; order: 1; overflow: visible;">
+          <img src="/campanhas-lucrativas/assets/arrow-hand-drawn.png" alt="" style="position: absolute; right: calc(100% + 4px); top: 130%; width: 30px; height: auto; transform: rotate(240deg); flex-shrink: 0; filter: invert(1) brightness(1.6);">
+          <sc-for list="{{ proofCaptions }}" as="cap" hint-placeholder-count="6">
+            <span style="{{ cap.mobileStyle }}; text-align: center; white-space: pre-line; font-family: 'Caveat', cursive; font-weight: 600; font-size: 19px; color: #fff;">{{ cap.mobileText }}</span>
+          </sc-for>
+        </div>
+      </div>
+
+      <p data-proof-detail="" style="font-family: Manrope, sans-serif; font-size: 15px; line-height: 1.6; color: oklch(78% 0 0); text-align: center; white-space: pre-line; max-width: 340px; margin: 10px 0 0;">{{ proofDetail }}</p>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 18px;" data-proof-dots="">
+        <sc-for list="{{ proofDots }}" as="dot" hint-placeholder-count="6">
+          <button onClick="{{ dot.goTo }}" aria-label="Ir para depoimento" style="all: unset; cursor: pointer; height: 6px; border-radius: 100px; transition: width .3s ease, opacity .3s ease; background: oklch(80% 0 0); width: {{ dot.width }}; opacity: {{ dot.opacity }};"></button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pra quem é / não é -->
+  <div id="pra-quem" style="padding: clamp(72px, 9vw, 120px) 5vw;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(45% 0 0); font-weight: 700; margin-bottom: 22px;">Pra quem é o curso</div>
+      <p style="font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; font-weight: 400; color: oklch(15% 0 0); margin: 0 0 40px; text-align: left;">Esse curso é pra mim?</p>
+      <div data-fornot-grid="" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); border: 2px solid #22b558; border-radius: 14px; overflow: hidden;">
+          <div style="background: #22b558; padding: 20px 26px;">
+            <h3 style="font-family: 'Instrument Serif', serif; font-size: 22px; font-weight: 400; color: #fff; margin: 0;">Esse curso É pra você que:</h3>
+          </div>
+          <div style="padding: 26px;">
+            <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px;">
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Já tem uma loja (física ou online) e quer vender todos os dias</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Posta mas não transforma seguidora em cliente</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Quer parar de depender de engajamento e sorte</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Está cansada de testar tudo e não saber o que funciona</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Quer um plano claro pra sair do zero ou destravar o faturamento</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: #22b558; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><span style="font-size: 14.5px; line-height: 1.5;">Está pronta pra aplicar — mesmo que ainda não seja perfeito</span></li>
+            </ul>
+          </div>
+        </div>
+        <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1) .05s, transform .9s cubic-bezier(.16,1,.3,1) .05s; border: 1px solid oklch(85% 0 0); border-radius: 14px; overflow: hidden;">
+          <div style="background: oklch(95% 0 0); padding: 20px 26px;">
+            <h3 style="font-family: 'Instrument Serif', serif; font-size: 22px; font-weight: 400; color: oklch(40% 0 0); margin: 0;">Esse curso <span style="position: relative; display: inline-block;">NÃO<svg width="60" height="12" viewBox="0 0 60 12" style="position: absolute; left: -4px; top: 10px; width: calc(100% + 8px); height: auto;"><path d="M2 8 Q 30 2 58 7" fill="none" stroke="#e5484d" stroke-width="2" stroke-linecap="round"></path></svg></span> é pra você que:</h3>
+          </div>
+          <div style="padding: 26px;">
+            <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px;">
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: oklch(90% 0 0); color: oklch(45% 0 0); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✗</span><span style="font-size: 14.5px; line-height: 1.5; color: oklch(45% 0 0);">Quer só mais dicas pra salvar e nunca aplicar</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: oklch(90% 0 0); color: oklch(45% 0 0); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✗</span><span style="font-size: 14.5px; line-height: 1.5; color: oklch(45% 0 0);">Acredita que vender é só postar foto bonita</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: oklch(90% 0 0); color: oklch(45% 0 0); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✗</span><span style="font-size: 14.5px; line-height: 1.5; color: oklch(45% 0 0);">Não quer aparecer, testar ou mudar nada</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: oklch(90% 0 0); color: oklch(45% 0 0); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✗</span><span style="font-size: 14.5px; line-height: 1.5; color: oklch(45% 0 0);">Procura resultado sem aplicar estratégia</span></li>
+              <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 100px; background: oklch(90% 0 0); color: oklch(45% 0 0); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px;">✗</span><span style="font-size: 14.5px; line-height: 1.5; color: oklch(45% 0 0);">Espera fórmula mágica sem esforço</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preço + CTA -->
+  <div id="oferta" style="position: relative; padding: clamp(72px, 9vw, 120px) 5vw; overflow: hidden;">
+    <div style="position: absolute; inset: 0; z-index: 0;">
+      <img src="/campanhas-lucrativas/assets/design-sem-nome-3--mrfgq2du.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center 32%;">
+      <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.78);" data-price-shadow=""></div>
+    </div>
+    
+  <div ref="{{ reveal }}" style="position: relative; z-index: 1; opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); max-width: 480px; margin: 0 auto;">
+      <div style="text-align: center; font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #fff; font-weight: 700; margin-bottom: 16px;">Sua oferta especial!</div>
+      <div style="background: #fff; border: 2px solid oklch(15% 0 0); border-radius: 16px; padding: 44px 36px; text-align: center;">
+      <p style="margin: 0; font-size: 14px; color: oklch(50% 0 0); text-decoration: line-through;">De R$497</p>
+      <p style="margin: 8px 0 0; font-family: 'Instrument Serif', serif; font-size: clamp(46px, 6vw, 58px); font-weight: 400; line-height: 1; text-align: center">&nbsp; &nbsp; R$97<span style="font-family: Manrope, sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.45 0 0); margin-left: 10px; vertical-align: bottom; width: 100px; height: 11px; line-height: 28.5px; text-align: center;">Hoje</span></p>
+      <p style="margin: 10px 0 0; font-size: 13px; color: oklch(45% 0 0);">acesso imediato · pagamento único</p>
+      <div style="margin-top: 28px;">
+        <a href="{{ kiwifyUrl }}" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; box-sizing: border-box; background: #22b558; color: #fff; font-weight: 700; font-size: 16px; padding: 17px 26px; border-radius: 100px; box-shadow: 0 14px 28px -10px rgba(34,181,88,0.55);">Quero montar minha primeira campanha lucrativa →</a>
+      </div>
+      <p style="margin-top: 20px; font-size: 12.5px; line-height: 1.5; color: oklch(45% 0 0);">Garantia de 7 dias. Se você entrar, assistir e achar que não era o que esperava, devolvo 100% do seu dinheiro — sem perguntas, sem burocracia. O risco é todo meu.</p>
+    <div style="font-size: 13px; line-height: 1; font-family: Manrope, sans-serif; position: absolute; left: 341px; top: 28px; text-align: right; color: oklch(0.45 0 0); width: 177px; height: 19px"><br></div></div></div></div>
+
+  <!-- FAQ -->
+  <div id="duvidas" style="padding: clamp(72px, 9vw, 120px) 5vw;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div ref="{{ reveal }}" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(45% 0 0); font-weight: 700; margin-bottom: 24px;">Dúvidas frequentes</div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <sc-for list="{{ faqItems }}" as="item" hint-placeholder-count="6">
+          <div style="border: 1px solid oklch(88% 0 0); border-radius: 12px; overflow: hidden;">
+            <button onClick="{{ item.toggle }}" style="all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 18px 22px;">
+              <span style="font-size: 15px; font-weight: 600;">{{ item.q }}</span>
+              <span style="flex-shrink: 0; font-size: 20px; color: oklch(20% 0 0); font-weight: 400;">{{ item.sign }}</span>
+            </button>
+            <sc-if value="{{ item.isOpen }}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 0; padding: 0 22px 20px; font-size: 14px; line-height: 1.6; color: oklch(40% 0 0);">{{ item.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div style="position: relative; background: #000; display: flex; align-items: center; justify-content: center; text-align: center; padding: clamp(48px, 10vw, 120px) 5vw clamp(72px, 10vw, 120px);">
+    <div ref="{{ reveal }}" data-cta-row="" style="opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); max-width: 620px; margin: 0 auto;">
+      <div data-cta-polaroid="" style="position: relative; display: inline-block; transform: rotate(-2.5deg) translateY(10px); margin-bottom: 44px;">
+        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-4deg); width: 76px; height: 22px; background: rgba(170,170,170,0.55); box-shadow: 0 1px 2px rgba(0,0,0,0.15);"></div>
+        <div style="background: #fff; padding: 12px 12px 18px; box-shadow: 0 20px 44px rgba(0,0,0,0.35);">
+          <img src="/campanhas-lucrativas/assets/curso-hero-walk.jpg" alt="Hanny Cristina" style="display: block; width: 160px; height: auto; object-fit: cover; aspect-ratio: 2/3; object-position: 75% 10%;">
+          <div style="padding-top: 8px; padding-right: 8px; text-align: right;">
+            <span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: 16px; color: #00000093;">© 2026</span>
+          </div>
+        </div>
+      </div>
+      <div data-cta-text="">
+        <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; font-weight: 400; color: #fff; margin: 0 0 28px;">Sua próxima campanha pode ser a<br>que vai&nbsp;<span style="font-style: italic;">virar o jogo do seu negócio.</span></h2>
+        <p style="font-size: 16px; line-height: 1.6; color: oklch(80% 0 0); margin: 0 0 28px;">Se você ainda está em dúvida, provavelmente é porque nunca <br data-desktop-break=""> teve um plano claro. E é&nbsp;exatamente isso que você vai ter aqui.</p><a href="{{ kiwifyUrl }}" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; background: #22b558; color: #fff; font-weight: 700; font-size: 16px; padding: 17px 30px; border-radius: 100px;">Garantir minha vaga agora →</a>
+        <p style="margin: 24px 0 0; font-size: 13px; color: oklch(60% 0 0);">Ainda ficou com dúvida? <a href="{{ whatsappUrl }}" target="_blank" style="color: oklch(90% 0 0); font-weight: 700; text-decoration: underline;">Fale no WhatsApp</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright Footer -->
+  <div style="background: #000; padding: 18px 5vw; text-align: center;">
+    <p style="margin: 0; font-size: 12px; color: rgba(255,255,255,0.5);">© Hanny Cristina · Mentora de Lojistas</p>
+  </div>
+
+  <sc-if value="{{ showScrollTop }}">
+    <button onClick="{{ scrollToTop }}" aria-label="Voltar ao topo" style="all: unset; position: fixed; bottom: 24px; right: 24px; z-index: 20; width: 48px; height: 48px; border-radius: 50%; background: oklch(15% 0 0); box-shadow: 0 8px 24px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; cursor: pointer;" style-hover="background:#22b558;">
+      <span style="color: #fff; font-size: 20px; line-height: 1;">↑</span>
+    </button>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  _els = [];
+  state = { openFaq: 0, proofIndex: 0, insideIndex: 0, reasonsIndex: 0, menuOpen: false, showScrollTop: false };
+
+
+  insideData = [
+    { src: "assets/plano-de-vendas.jpg", alt: "Plano de vendas dos R$0 aos R$10K", pos: "center", caption: "Plano de vendas estruturado — passo a passo", captionMobile: "Plano de vendas estruturado\n— passo a passo" },
+    { src: "assets/tela-curso.jpg", alt: "Tela do curso Dos R$0 aos R$10K com campanhas lucrativas", pos: "31%", caption: "Área de membros completa & organizada", captionMobile: "Área de membros completa\n& organizada" }
+  ];
+
+  proofData = [
+    { src: "assets/fb-new-1.png", caption: "Um lançamento\ninteiro esgotado", captionMobile: "Um lançamento inteiro esgotado", w: 1328, h: 937, detail: "Peças esgotando no primeiro dia\nde campanha na loja física" },
+    { src: "assets/fb-new-2.png", caption: "Ela teve que correr\ncom a reposição", captionMobile: "Ela teve que correr com a reposição", w: 1328, h: 937, detail: "Campanha feita para venda de estoque parado. 90% dos produtos vendidos em 3 dias de ação" },
+    { src: "assets/fb-new-3.png", caption: "De R$4 mil para\nR$8 mil em vendas", captionMobile: "De R$4 mil para R$8 mil em vendas", w: 1328, h: 937, detail: "Dobrou as vendas do último lançamento, com a loja física, \nsem site, somente WhatsApp" },
+    { src: "assets/fb-new-4.png", caption: "+R$12 mil de\nfaturamento em 1 mês", captionMobile: "+R$12 mil de faturamento em 1 mês", w: 1328, h: 937, detail: "Em 1 mês aplicando as estratégias que vou te ensinar aqui, ela faturou 12k a mais" },
+    { src: "assets/fb-new-5.png", caption: "De R$12 mil para\nR$25 mil em 1 mês", captionMobile: "De R$12 mil para R$25 mil em 1 mês", w: 1328, h: 937, detail: "Depois de meses de um faturamento ruim na loja física, elas dobraram o faturamento" },
+    { src: "assets/fb-new-6.png", caption: "R$35.000 vendidos\nem um mês", captionMobile: "R$35.000 vendidos em um mês", w: 1328, h: 937, detail: "Aplicando as estratégias das campanhas lucrativas\nDe 10k foram para 30k" }
+  ];
+
+  faqData = [
+    { q: "Preciso ter muitos seguidores?", a: "Não. O método funciona com a audiência que você já tem. O que muda é a estratégia, não o tamanho do perfil." },
+    { q: "Preciso investir em tráfego pago?", a: "Não. Todo o método é baseado em tráfego orgânico: conteúdo certo, no momento certo, pra pessoa certa." },
+    { q: "Sou iniciante, é pra mim?", a: "Sim, especialmente pra você. Você vai sair com um plano pronto sem precisar descobrir tudo sozinha." },
+    { q: "Em quanto tempo vejo resultado?", a: "Se você aplicar na mesma semana, é possível ver resultado já nos primeiros dias. Temos alunas que venderam no dia da primeira campanha." },
+    { q: "Tenho só loja física, funciona?", a: "Sim. Você vai aprender a usar o Instagram pra gerar desejo e levar a cliente até você, no direct ou na loja." },
+    { q: "Já tentei várias estratégias e não funcionou...", a: "Porque você provavelmente estava aplicando coisas soltas. Aqui você aprende a estruturar campanhas completas que conduzem à venda." }
+  ];
+
+  heroRef = (el) => {
+    if (!el) return;
+    this._heroEl = el;
+    const lock = () => {
+      if (this._heroLockedWidth === window.innerWidth) return;
+      this._heroLockedWidth = window.innerWidth;
+      el.style.minHeight = Math.round(window.innerHeight * 0.92) + 'px';
+    };
+    lock();
+    if (!this._heroResizeBound) {
+      this._heroResizeBound = lock;
+      window.addEventListener('resize', lock);
+    }
+  };
+
+  componentDidMount() {
+    this._check = () => {
+      this._els.forEach((el) => {
+        if (!el || el.dataset.revealed) return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.92) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          el.dataset.revealed = '1';
+        }
+      });
+    };
+    window.addEventListener('scroll', this._check, { passive: true });
+    window.addEventListener('resize', this._check);
+    this._check();
+    this._interval = setInterval(this._check, 400);
+
+    this._scrollTop = () => {
+      const show = window.scrollY > window.innerHeight * 0.8;
+      if (show !== this.state.showScrollTop) this.setState({ showScrollTop: show });
+    };
+    window.addEventListener('scroll', this._scrollTop, { passive: true });
+    this._scrollTop();
+
+    this._proofTimer = setInterval(() => {
+      this.setState((s) => ({ proofIndex: (s.proofIndex + 1) % this.proofData.length }));
+    }, 3500);
+
+    this._insideTimer = setInterval(() => {
+      this.setState((s) => ({ insideIndex: (s.insideIndex + 1) % this.insideData.length }));
+    }, 6000);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._check);
+    window.removeEventListener('scroll', this._scrollTop);
+    window.removeEventListener('resize', this._check);
+    if (this._heroResizeBound) window.removeEventListener('resize', this._heroResizeBound);
+    if (this._interval) clearInterval(this._interval);
+    if (this._proofTimer) clearInterval(this._proofTimer);
+    if (this._insideTimer) clearInterval(this._insideTimer);
+  }
+
+  renderVals() {
+    const faqItems = this.faqData.map((f, i) => {
+      const isOpen = this.state.openFaq === i;
+      return {
+        q: f.q,
+        a: f.a,
+        isOpen,
+        sign: isOpen ? '−' : '+',
+        toggle: () => this.setState((s) => ({ openFaq: s.openFaq === i ? -1 : i }))
+      };
+    });
+
+    const courseLinks = [
+      { label: 'Aceleração Unic', href: 'https://forms.gle/tZUoFiLGEcCMkmT18', target: '_blank' },
+      { label: 'Mentoria Unic', href: '/mentoria-unic' },
+      { label: 'Unic Commerce', href: '/unic-commerce' }
+    ].map((l) => ({ ...l, close: () => this.setState({ menuOpen: false }) }));
+
+    const insideStyles = {};
+    this.insideData.forEach((it, i) => {
+      insideStyles[i] = `position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center ${it.pos || 'center'}; display:block; opacity:${i === this.state.insideIndex ? 1 : 0}; transition: opacity .6s ease;`;
+    });
+
+    const insideCaptions = this.insideData.map((it, i) => ({
+      text: it.caption,
+      mobileText: it.captionMobile || it.caption,
+      mobileStyle: `display:${i === this.state.insideIndex ? 'inline' : 'none'}`,
+      style: `position:absolute; inset:0; display:flex; align-items:center; opacity:${i === this.state.insideIndex ? 1 : 0}; transition: opacity .6s ease;`
+    }));
+
+    const insideDots = this.insideData.map((_, i) => ({
+      width: i === this.state.insideIndex ? '22px' : '6px',
+      opacity: i === this.state.insideIndex ? 1 : 0.35,
+      goTo: () => this.setState({ insideIndex: i })
+    }));
+
+    const activeProof = this.proofData[this.state.proofIndex];
+    const proofBoxAspect = activeProof ? `${activeProof.w} / ${activeProof.h}` : '4 / 3';
+
+    const proofStyles = {};
+    this.proofData.forEach((it, i) => {
+      proofStyles[i] = `position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; opacity:${i === this.state.proofIndex ? 1 : 0}; transition: opacity 1s ease;`;
+    });
+
+    const proofCaptions = this.proofData.map((it, i) => ({
+      text: it.caption,
+      mobileText: it.captionMobile || it.caption,
+      mobileStyle: `display:${i === this.state.proofIndex ? 'inline' : 'none'}`,
+      style: `position:absolute; inset:0; display:flex; align-items:center; opacity:${i === this.state.proofIndex ? 1 : 0}; transition: opacity 1s ease;`
+    }));
+
+    const proofDots = this.proofData.map((_, i) => ({
+      width: i === this.state.proofIndex ? '22px' : '6px',
+      opacity: i === this.state.proofIndex ? 1 : 0.35,
+      goTo: () => this.setState({ proofIndex: i })
+    }));
+
+    const menuLinks = [
+      { label: 'Sobre mim', href: '#quem-vai-ensinar' },
+      { label: 'O que você recebe', href: '#incluso' },
+      { label: 'Resultados das alunas', href: '#feedbacks' },
+      { label: 'Oferta', href: '#oferta' }
+    ].map((l) => ({ ...l, close: () => this.setState({ menuOpen: false }) }));
+
+    return {
+      heroRef: this.heroRef,
+      showScrollTop: this.state.showScrollTop,
+      scrollToTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      menuOpen: this.state.menuOpen,
+      menuLinks,
+      courseLinks,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      kiwifyUrl: "https://pay.kiwify.com.br/5C8YMqC",
+      whatsappUrl: "https://wa.link/xl3436",
+      faqItems,
+      proofStyles,
+      proofBoxAspect,
+      proofIndex: this.state.proofIndex,
+      proofDetail: activeProof ? activeProof.detail : '',
+      proofCaptions,
+      proofDots,
+      insideStyles,
+      insideDots,
+      insideCaptions,
+      insidePrev: () => this.setState((s) => ({ insideIndex: (s.insideIndex - 1 + this.insideData.length) % this.insideData.length })),
+      insideNext: () => this.setState((s) => ({ insideIndex: (s.insideIndex + 1) % this.insideData.length })),
+      proofPrev: () => this.setState((s) => ({ proofIndex: (s.proofIndex - 1 + this.proofData.length) % this.proofData.length })),
+      proofNext: () => this.setState((s) => ({ proofIndex: (s.proofIndex + 1) % this.proofData.length })),
+      reveal: (el) => {
+        if (el && !this._els.includes(el)) this._els.push(el);
+      },
+      reasonsScrollRef: (el) => {
+        if (el && !this._reasonsEl) {
+          this._reasonsEl = el;
+          el.addEventListener('scroll', () => {
+            const idx = Math.round(el.scrollLeft / Math.max(1, el.clientWidth));
+            if (idx !== this.state.reasonsIndex) this.setState({ reasonsIndex: idx });
+          }, { passive: true });
+        }
+      },
+      reasonsDots: [0, 1, 2, 3].map((i) => ({
+        width: i === this.state.reasonsIndex ? '22px' : '6px',
+        opacity: i === this.state.reasonsIndex ? 1 : 0.35
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>
